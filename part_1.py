@@ -2,20 +2,38 @@
 # который принимает список списков и возвращает их плоское представление,
 # т.е последовательность состоящую из вложенных элементов.
 # Функция test в коде ниже также должна отработать без ошибок.
-
 class FlatIterator:
-
-    def __init__(self, list_of_list):
-        ...
-
+    def __init__(self, list_x):
+        self.cursor_x = 0
+        self.list_x = list_x
+        self.end_x = len(list_x)
     def __iter__(self):
-        ...
+        self.cursor_xx = 0
         return self
-
     def __next__(self):
-        ...
-        return item
+        if self.cursor_x == self.end_x:
+            raise StopIteration
+        x = self.list_x[self.cursor_x]
+        self.end_xx = len(x)
+        xx = x[self.cursor_xx]
+        # print(f'x[{self.cursor_x}] xx[{self.cursor_xx}] : {xx}')
+        if self.cursor_xx == self.end_xx-1:
+            self.cursor_x += 1
+            self.cursor_xx = -1
+        self.cursor_xx += 1
+        return xx
 
+# if __name__ == '__main__':
+
+#     list_of_lists_x = [
+#         ['a', 'b', 'c'],
+#         ['d', 'e', 'f', 'h', False],
+#         [1, 2, None],
+#         [9, 7, 4, 'ya!']
+#     ]
+#     print(list_of_lists_x)
+#     for elem in FlatIterator(list_of_lists_x):
+#         print(elem)
 
 def test_1():
 
