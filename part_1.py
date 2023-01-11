@@ -17,12 +17,12 @@ class FlatIterator:
         if self.cursor_x == self.end_x:
             raise StopIteration
         list_xx = self.list_x[self.cursor_x]
-        item_xxx = list_xx[self.cursor_xx]
+        item_xx = list_xx[self.cursor_xx]
         self.cursor_xx += 1
         if self.cursor_xx == len(list_xx):
             self.cursor_x += 1
             self.cursor_xx = 0
-        return item_xxx
+        return item_xx
 
 def test_1():
 
