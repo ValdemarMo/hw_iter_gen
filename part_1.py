@@ -16,24 +16,11 @@ class FlatIterator:
         x = self.list_x[self.cursor_x]
         self.end_xx = len(x)
         xx = x[self.cursor_xx]
-        # print(f'x[{self.cursor_x}] xx[{self.cursor_xx}] : {xx}')
-        if self.cursor_xx == self.end_xx-1:
-            self.cursor_x += 1
-            self.cursor_xx = -1
         self.cursor_xx += 1
+        if self.cursor_xx == self.end_xx:
+            self.cursor_x += 1
+            self.cursor_xx = 0
         return xx
-
-# if __name__ == '__main__':
-
-#     list_of_lists_x = [
-#         ['a', 'b', 'c'],
-#         ['d', 'e', 'f', 'h', False],
-#         [1, 2, None],
-#         [9, 7, 4, 'ya!']
-#     ]
-#     print(list_of_lists_x)
-#     for elem in FlatIterator(list_of_lists_x):
-#         print(elem)
 
 def test_1():
 
