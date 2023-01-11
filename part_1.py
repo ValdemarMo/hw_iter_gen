@@ -13,14 +13,13 @@ class FlatIterator:
     def __next__(self):
         if self.cursor_x == self.end_x:
             raise StopIteration
-        x = self.list_x[self.cursor_x]
-        self.end_xx = len(x)
-        xx = x[self.cursor_xx]
+        list_xx = self.list_x[self.cursor_x]
+        item_xxx = list_xx[self.cursor_xx]
         self.cursor_xx += 1
-        if self.cursor_xx == self.end_xx:
+        if self.cursor_xx == len(list_xx):
             self.cursor_x += 1
             self.cursor_xx = 0
-        return xx
+        return item_xxx
 
 def test_1():
 
