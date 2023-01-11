@@ -3,13 +3,16 @@
 # т.е последовательность состоящую из вложенных элементов.
 # Функция test в коде ниже также должна отработать без ошибок.
 class FlatIterator:
+
     def __init__(self, list_x):
         self.cursor_x = 0
         self.list_x = list_x
         self.end_x = len(list_x)
+
     def __iter__(self):
         self.cursor_xx = 0
         return self
+
     def __next__(self):
         if self.cursor_x == self.end_x:
             raise StopIteration
