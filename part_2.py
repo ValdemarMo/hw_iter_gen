@@ -3,14 +3,11 @@
 # Функция test в коде ниже также # должна отработать без ошибок.
 
 import types
-
-
-def flat_generator(list_of_lists):
-
-    ...
-    yield
-    ...
-
+def flat_generator(list_x):
+    x = list_x
+    for xx in x:
+        for xxx in xx:
+            yield xxx
 
 def test_2():
 
