@@ -4,6 +4,7 @@
 
 import types
 def flat_generator(list_x):
+
     x = list_x
     for xx in x:
         for xxx in xx:
