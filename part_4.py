@@ -10,9 +10,9 @@ import types
 def flat_generator(list_x):
 
     x = list_x
-    # print(type(x))
-    # print(x)
+    print(x)
     for xx in x:
+        print(type(xx))
         if isinstance(xx, list):
             # xxx = flat_generator(xx)
             xxx = next(flat_generator(xx))
