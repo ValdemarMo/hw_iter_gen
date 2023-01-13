@@ -14,15 +14,15 @@ def flat_generator(list_x):
     for xx in x:
         print(type(xx))
         if isinstance(xx, list):
+            print(f'r-in <  >')
             # xxx = flat_generator(xx)
             xxx = next(flat_generator(xx))
             # print(f'yield inery <{xxx}>')
-            print(f'yield inery <  >')
-            yield xxx
+            print(f'r-ex <  >')
         else:
             xxx = xx
             print(f'yield out   <{xxx}>')
-            yield xxx
+        yield xxx
 
 list_x = [
         [['a'], ['b', 'c']],
