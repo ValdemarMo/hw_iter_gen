@@ -10,8 +10,6 @@ import types
 def flat_generator(list_x):
 
     x = list_x
-    # len_x = len(x)
-    # print(x)
     # print(type(x))
     # print(x)
     for xx in x:
