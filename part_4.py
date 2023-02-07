@@ -8,30 +8,30 @@
 import types
 
 def flat_generator(list_x):
+    if __name__ == '__main__':
 
-    x = list_x
-    print(x)
-    for xx in x:
-        print(type(xx))
-        if isinstance(xx, list):
-            print(f'r-in <  >')
-            # xxx = flat_generator(xx)
-            xxx = next(flat_generator(xx))
-            # print(f'yield inery <{xxx}>')
-            print(f'r-ex <  >')
-        else:
+        x = list_x
+        print(x)
+        for xx in x:
+            print(type(xx))
             xxx = xx
+            if isinstance(xx, list):
+                print(f'r-in <  >')
+                # xxx = flat_generator(xx)
+                xxx = next(flat_generator(xx))
+                # print(f'yield inery <{xxx}>')
+                print(f'r-ex <  >')
             print(f'yield out   <{xxx}>')
-        yield xxx
+            yield xxx
 
-list_x = [
+list_x1 = [
         [['a'], ['b', 'c']],
         ['d', 'e', [['f'], 'h'], False],
         [1, 2, None, [[[[['!']]]]], []]
     ]
 
 if __name__ == '__main__':
-    for elem in flat_generator(list_x):
+    for elem in flat_generator(list_x1):
         print(f'exit        <{elem}>>>\n')
 
 def test_4():
